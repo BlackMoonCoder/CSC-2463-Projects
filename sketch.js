@@ -51,7 +51,7 @@ function draw() {
 
   // Sketch 4
   fill(240, 100, 50);
-  strokeWeight(0);
+  strokeWeight(8);
   rect(580, 50, 400, 300);
 
   fill(120, 95, 39);  
