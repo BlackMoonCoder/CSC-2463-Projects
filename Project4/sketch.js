@@ -4,14 +4,15 @@ let timer = 30;
 let gameRunning = true;
 let bugSpritesheet;
 let squishedImage;
+let squishSound;
 let frameWidth, frameHeight;
 let numFrames = 4;
-let lastUpdateTime = 0;
 let spriteScale = 1.5;
 
 function preload() {
   bugSpritesheet = loadImage("RoachSprite.png");
   squishedImage = loadImage("RoachSquish.png");
+  squishSound = loadSound("squish.mp3");
 }
 
 function setup() {
@@ -117,6 +118,7 @@ class Bug {
 
   squish() {
     this.alive = false;
+    squishSound.play();
   }
 }
 
