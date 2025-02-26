@@ -17,8 +17,6 @@ function preload() {
     waves: "waves.mp3"
   }).toDestination();
 
- const distortion = new Tone.Distortion(0.4).toDestination();
- samples.connect(distortion);
 }
 
 function setup() {
