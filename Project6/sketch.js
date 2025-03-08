@@ -1,5 +1,6 @@
 let synth1, filt, rev, polySynth, noise1, ampEnv1, filt1;
 let activeKey = null;
+let filterSlider;
 
 let keyNotes = {
   'a': 'A4', 's': 'B4', 'd': 'C5', 'f': 'D5',
@@ -13,6 +14,10 @@ let keyNotes1 = {
 
 function setup() {
   createCanvas(400, 400);
+  
+  filterSlider = createSlider(200, 5000, 1500, 1);
+  filterSlider.position(20, 350);
+  filterSlider.style('width', '360px');
 
   filt = new Tone.Filter(1500, "lowpass").toDestination();
   rev = new Tone.Reverb(2).connect(filt);
@@ -41,6 +46,8 @@ function setup() {
 function draw() {
   background(220);
   text("Keys A-K: Monophonic Synth\nKeys Q-I: Polyphonic Synth\nKey Z: Noise", 20, 20);
+  text("Filter Frequency", 20, 340);
+  filt.frequency.value = filterSlider.value();
 }
 
 function keyPressed() {
