@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arduino-Powered Space Shooter Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f9f9f9;
+    }
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    hr {
+      margin: 2em 0;
+    }
+    img {
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 1em;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🚀 Arduino-Powered Space Shooter Game</h1>
+  <p>Welcome to the <strong>Arduino + p5.js + Tone.js Space Shooter</strong> — a browser game where you blast asteroids out of the sky using a <em>real joystick and button</em>. It’s old-school arcade meets DIY hardware!</p>
+
+  <hr>
+
+  <h2>🎯 What’s This?</h2>
+  <p>This is a fun project that combines:</p>
+  <ul>
+    <li>🎮 A joystick and button connected to an <strong>Arduino Uno</strong></li>
+    <li>🖱️ A spaceship you control in the browser with smooth movement</li>
+    <li>💥 Asteroids that need destroying</li>
+    <li>🔊 Sound effects and music using <strong>Tone.js</strong></li>
+    <li>💡 LED lighting up every time you shoot (pew pew!)</li>
+  </ul>
+  <p>You control the ship with physical movement. It’s like bringing your game controller to life!</p>
+
+  <hr>
+
+  <h2>🧠 How It Works</h2>
+  <ul>
+    <li>The <strong>joystick</strong> sends X and Y movement data from the Arduino.</li>
+    <li>A <strong>button press</strong> fires a laser (and lights up the LED).</li>
+    <li><strong>p5.js</strong> draws everything: spaceship, asteroids, lasers.</li>
+    <li><strong>Tone.js</strong> handles music and sound effects.</li>
+    <li>Enemies spawn and move across the screen — shoot them before they hit you!</li>
+  </ul>
+
+  <hr>
+
+  <h2>📸 Media</h2>
+
+  <h3>Asteroid Sprite Sheet</h3>
+  <p>🪨 2x16 sprite sheet for randomized asteroid animation</p>
+
+  <h3>Gameplay Screenshots</h3>
+  <p>Here are a couple of action shots from the game:</p>
+
+  <img src="screenshot1.png" alt="Gameplay Screenshot 1">
+  <img src="screenshot2.png" alt="Gameplay Screenshot 2">
+
+  <hr>
+
+  <h2>🧰 Tech Stack</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Tool</th>
+        <th>Purpose</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Arduino</td>
+        <td>Sends joystick + button input</td>
+      </tr>
+      <tr>
+        <td>p5.js</td>
+        <td>Renders graphics in browser</td>
+      </tr>
+      <tr>
+        <td>Tone.js</td>
+        <td>Adds sound/music effects</td>
+      </tr>
+      <tr>
+        <td>Serial</td>
+        <td>Communicates Arduino → browser</td>
+      </tr>
+      <tr>
+        <td>HTML/CSS</td>
+        <td>For basic layout and styling</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2>🛠️ Setup</h2>
+  <h3>Hardware</h3>
+  <ul>
+    <li>Arduino Uno R3</li>
+    <li>Analog joystick</li>
+    <li>Push button</li>
+    <li>220Ω resistor for the LED</li>
+    <li>Jumper wires, breadboard</li>
+  </ul>
+
+  <h3>Software</h3>
+  <ol>
+    <li>Flash Arduino with the joystick + button code.</li>
+    <li>Open the browser game (index.html) on your computer.</li>
+    <li>Make sure your serial port is selected in browser.</li>
+    <li>Blast some asteroids!</li>
+  </ol>
+
+  <hr>
+
+  <h2>💡 Future Ideas</h2>
+  <ul>
+    <li>💾 Save high scores with localStorage</li>
+    <li>🌌 Add more enemy types (like UFOs!)</li>
+    <li>🔥 Particle effects for explosions</li>
+    <li>🧠 Smarter asteroid movement</li>
+    <li>🎨 Animate your ship or add skins</li>
+    <li>👾 Power-ups like shields, bombs, double shots</li>
+    <li>📱 Touchscreen controls for mobile play</li>
+  </ul>
+
+  <hr>
+
+  <h2>🌐 Try It Live</h2>
+  <p>🔗 <strong>Live Game:</strong> <a href="https://blackmooncoder.github.io/CSC-2463-Projects/FinalProject" target="_blank">https://blackmooncoder.github.io/CSC-2463-Projects/FinalProject</a></p>
+
+  <hr>
+
+  <h2>🎥 Demo Video</h2>
+  <p>Watch the game in action!<br>
+  📺 <a href="https://www.youtube.com/watch?v=1XVLTRSKnN0" target="_blank">YouTube Demo</a></p>
+
+  <hr>
+
+  <h2>🧑‍💻 Built With Love</h2>
+  <p>This project was created for a final systems integration assignment combining hardware, graphics, sound, and user interaction. It’s fun, it’s flashy, and it taught us a lot!</p>
+
+  <hr>
+
+  <p>Enjoy the game, and may your shots always be straight!<br>
+  👨‍🚀🕹️✨</p>
+
+</body>
+</html>
